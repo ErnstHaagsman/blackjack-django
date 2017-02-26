@@ -1,0 +1,6 @@
+.idea/
+
+# Vagrant
+.vagrant/
+*.retry
+*.log
