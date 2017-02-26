@@ -66,5 +66,11 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "main.yml"
+    ansible.host_vars = {
+        "default" => {
+            "project_dir": "/vagrant",
+            "requirements_file": "requirements/local.txt"
+        }
+    }
   end
 end
